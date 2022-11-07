@@ -5,19 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel API</title>
+        <style>
+            .title {
+                font-size: 20px;
+            }
+
+            .container {
+                margin: auto !important;
+                width: 70% !important;
+                padding: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h2>Laravel API Demo</h2>
+    <a href="/users">Visit User Generation Page</a>
+        <h2>Report Page</h2>
+        <div class="container">
+            <p class="title">User Continent Analysis</p>
+            <div id="continentChart"></div>
 
-        <h2>User Continent Analysis</h2>
-        <div id="continentChart"></div>
-        <div style="width: 30%; float:left">
-            <h2>User Sex/Gender Analysis</h2>
+
+        <div style="width: 50%; float:left">
+            <p class="title">User Sex/Gender Analysis</p>
             <div id="sexChart"></div>
         </div>
-        <div style="width: 70%; float:right">
-            <h2>User Age Analysis</h2>
+        <div style="width: 50%; float:right">
+            <p class="title">User Age Analysis</p>
             <div id="ageChart"></div>
+        </div>
         </div>
 
         <script type="text/javascript" src="{{URL::asset('js/apexCharts.js')}}"></script>

@@ -6,19 +6,9 @@
             series: data.userBySexes,
             chart: {
             type: 'donut',
+            width: "100%",
           },
-          labels: data.sexes,
-          responsive: [{
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
+          labels: data.sexes
           };
 
           var chart = new ApexCharts(document.querySelector("#sexChart"), options);

@@ -5,21 +5,10 @@ fetch('/users/report/ageData')
         var options = {
             series: data.userByAges,
             chart: {
-            width: 380,
+            width: "90%",
             type: 'pie',
           },
           labels: data.ageRanges,
-          responsive: [{
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
           };
   
           var chart = new ApexCharts(document.querySelector("#ageChart"), options);

@@ -7,16 +7,19 @@
         <title>Laravel API</title>
     </head>
     <body>
-        <h2>Laravel API Demo</h2>
-        <h4>Generate specific number of Users</h4>
+        <h2>User Generation</h2>
+        <p>Generate specific number of Users</p>
         {{ Form::open(array('url' => 'users/add', 'method' => 'post')) }}
             {{ Form::number('numOfUsers', 15000) }}
-            {{ Form::submit('Generate this num of users') }}
+            {{ Form::submit('Generate this num of users') }} (tested upto 30k data)
         {{ Form::close() }}
         <br/>
-        <h4>Clean the database data</h4>
+        <p>Clean the database data</p>
         {{ Form::open(array('url' => 'users/reset', 'method' => 'get')) }}
             {{ Form::submit('Clean') }}
         {{ Form::close() }}
+
+        <br/>
+        <a href="users/report">Visit Report page</a>
     </body>
 </html>

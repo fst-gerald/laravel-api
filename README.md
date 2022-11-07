@@ -3,7 +3,7 @@
 2. Go to `http://localhost/users` in your browser.
 
 
-## Endpoints
+## Routes/ Endpoints
 
 `/users`
  - Can specify what number of users to generate
@@ -19,5 +19,5 @@
 `/users/report/ageData`
 - returns json for the calculation of users's age
 
-`users/report/sexData`
+`/users/report/sexData`
 - returns json for the calculation of users's gender
