@@ -1,5 +1,5 @@
 {
-fetch('/users/report/continentData')
+fetch(`/users/report${segment}/continentData`)
     .then(response => response.json())
     .then(data => {
         var options = {

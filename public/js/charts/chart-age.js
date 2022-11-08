@@ -1,5 +1,5 @@
 {
-fetch('/users/report/ageData')
+fetch(`/users/report${segment}/ageData`)
     .then(response => response.json())
     .then(data => {
         var options = {

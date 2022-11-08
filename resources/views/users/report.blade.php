@@ -36,7 +36,14 @@
         </div>
 
         <script type="text/javascript" src="{{URL::asset('js/apexCharts.js')}}"></script>
+        
+        <script>
+            let url = new URL(location.href)
+            let params = new URLSearchParams(url.search);
+            let version = params.get('version');
 
+            let segment = version != null ? 'V2' : ''; 
+        </script>
         <script type="text/javascript" src="{{URL::asset('js/charts/chart-continent.js')}}"></script>
         <script type="text/javascript" src="{{URL::asset('js/charts/chart-sex.js')}}"></script>
         <script type="text/javascript" src="{{URL::asset('js/charts/chart-age.js')}}"></script>

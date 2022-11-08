@@ -18,7 +18,7 @@ class UserReportController extends Controller
 
         $userByAges = array_fill_keys($ageRanges, 0);
 
-        User::chunk(500, function($users) use (&$userByAges) {
+        User::chunkById(500, function($users) use (&$userByAges) {
             foreach ($users as $user){
                 if ($user->age >= 80) {
                     $userByAges['80+'] += 1;
@@ -56,7 +56,7 @@ class UserReportController extends Controller
 
         $userBySexes = array_fill_keys($sexes, 0);
 
-        User::chunk(500, function($users) use (&$userBySexes) {
+        User::chunkById(500, function($users) use (&$userBySexes) {
             foreach ($users as $user){
                 $type = User::SEXES[$user->sex];
                 $userBySexes[$type] += 1;
@@ -76,7 +76,7 @@ class UserReportController extends Controller
 
         $userByContinents = array_fill_keys($continents, 0);
 
-        User::chunk(500, function($users) use (&$userByContinents) {
+        User::chunkById(500, function($users) use (&$userByContinents) {
             foreach ($users as $user){
                 $userByContinents[$user->continent] += 1;
             }
