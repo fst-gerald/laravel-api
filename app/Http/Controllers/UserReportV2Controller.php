@@ -13,7 +13,8 @@ class UserReportV2Controller extends Controller
 
         $userByAges = array_fill_keys($ageRanges, 0);
 
-        foreach (User::cursor() as $user){
+        $query = User::select('id','age');
+        foreach ($query->cursor() as $user){
             if ($user->age >= 80) {
                 $userByAges['80+'] += 1;
                 continue;
@@ -49,7 +50,8 @@ class UserReportV2Controller extends Controller
 
         $userBySexes = array_fill_keys($sexes, 0);
 
-        foreach (User::cursor() as $user) {
+        $query = User::select('id','sex');
+        foreach ($query->cursor() as $user) {
             $type = User::SEXES[$user->sex];
             $userBySexes[$type] += 1;
         }
@@ -67,7 +69,8 @@ class UserReportV2Controller extends Controller
 
         $userByContinents = array_fill_keys($continents, 0);
 
-        foreach (User::cursor() as $user) {
+        $query = User::select('id','continent');
+        foreach ($query->cursor() as $user) {
             $userByContinents[$user->continent] += 1;
         }
 
