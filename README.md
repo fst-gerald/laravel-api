@@ -28,3 +28,8 @@
 
 ## Additional Infos
 - For the actual database data, please go to `http://localhost:8888/`, and check <mark>laravel_db</mark>
+- To compare the speed of two different approach, laravel telescope is installed,
+    we can check the below routes in `http://localhost/telescope/requests`:
+    - `/users/report`
+    - `/users/report?version=2`
+
