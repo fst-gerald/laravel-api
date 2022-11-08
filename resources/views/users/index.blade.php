@@ -11,7 +11,7 @@
         <p>Generate specific number of Users</p>
         {{ Form::open(array('url' => 'users/add', 'method' => 'post')) }}
             {{ Form::number('numOfUsers', 15000) }}
-            {{ Form::submit('Generate this num of users') }} (tested upto 30k data)
+            {{ Form::submit('Generate this num of users') }} (up to 30k)
         {{ Form::close() }}
         <br/>
         <p>Clean the database data</p>
